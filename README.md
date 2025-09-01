@@ -1,56 +1,123 @@
-<h1 align="center">Linkedin Clone ✨</h1>
+🚀 LinkedIn Clone
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+A full-stack LinkedIn clone built with modern web technologies, featuring user authentication, profile management, posts, connections, and real-time notifications.
 
-[Video Tutorial on Youtube](https://youtu.be/Ycg48pVp3SU)
+✨ Features
 
-About This Course:
+🔐 Authentication – Secure login & signup with JWT
 
--   🚀 Project Setup
--   🗄️ MongoDB Integration
--   💳 Stripe Payment Setup
--   🔐 Authentication System with JWT
--   ✉️ Welcome Emails
--   🎨 Design with Tailwind & DaisyUI
--   🛡️ Data Protection
--   🤝 Connection Requests (Send, Accept, Reject)
--   📝 Creating and Sharing Posts
--   🖼️ Image Upload for Posts and Profiles
--   👤 Profile Creation and Updates
--   👥 Suggested Users Feature
--   👍 Like and Comment on Posts
--   📰 News Feed Algorithm
--   ⌛ And a lot more...
+👤 Profiles – Manage user info, skills, and professional details
 
-### Setup .env file
+🤝 Connections – Send, accept, and reject connection requests
 
-```bash
+📝 Posts & Feed – Create posts, view feeds, interact with content
+
+🔔 Notifications – Real-time alerts for activities
+
+☁️ Cloud Storage – Seamless image and file hosting with Cloudinary
+
+🛠 Tech Stack
+Frontend
+
+⚛️ React.js / Next.js (Specify your choice)
+
+🎨 Tailwind CSS / Material UI for styling
+
+Backend
+
+🟢 Node.js & Express.js
+
+🍃 MongoDB with Mongoose ORM
+
+🔑 JWT Authentication & bcrypt
+
+Integrations
+
+🌩 Cloudinary – Image hosting
+
+📧 Mailtrap / Nodemailer – Email services
+
+🛡 Dotenv – Environment variables
+
+🚀 Getting Started
+# Clone repository
+git clone https://github.com/your-username/linkedin-clone.git
+
+# Navigate to project
+cd linkedin-clone
+
+# Install dependencies
+npm install
+
+# Configure environment variables
+cp .env.example .env
+
+# Start development server
+npm run dev
+
+🔑 Environment Variables
+
+Add these to a .env file in the root directory:
+
 PORT=5000
-MONGO_URI=<your_mongo_uri>
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_URL=your_cloudinary_url
+MAILTRAP_USER=your_mailtrap_user
+MAILTRAP_PASS=your_mailtrap_pass
 
-JWT_SECRET=<yourverystrongsecret>
+📂 Project Structure
+linkedin-clone/
+ ├── backend/          # API, models, controllers
+ ├── frontend/         # React app
+ ├── .env              # Environment variables
+ ├── package.json      # Dependencies
+ └── README.md         # Documentation
 
-NODE_ENV=development
+📡 API Endpoints
+Authentication
 
-MAILTRAP_TOKEN=<your_mailtrap_token>
-EMAIL_FROM=mailtrap@demomailtrap.com
-EMAIL_FROM_NAME=<Your_Name>
+POST /api/auth/register → Create a new account
 
-CLOUDINARY_API_KEY=<your_cloudinary_api_key>
-CLOUDINARY_API_SECRET=<your_cloudinary_api_secret>
-CLOUDINARY_CLOUD_NAME=<your_cloudinary_cloud_name>
+POST /api/auth/login → Log in and receive JWT token
 
-CLIENT_URL=http://localhost:5173
-```
+User
 
-### Run this app locally
+GET /api/users/:id → Fetch user profile
 
-```shell
+PUT /api/users/:id → Update user info
+
+Connections
+
+POST /api/connections/request → Send connection request
+
+POST /api/connections/accept → Accept request
+
+Posts
+
+POST /api/posts → Create a post
+
+GET /api/posts/feed → Get feed
+
+🌐 Deployment
+Vercel (Frontend)
 npm run build
-```
+vercel deploy
 
-### Start the app
+Render / Railway / Heroku (Backend)
 
-```shell
-npm run start
-```
+Push backend to GitHub
+
+Connect to Render/Heroku
+
+Add environment variables
+
+Deploy!
+
+🤝 Contributing
+
+Pull requests and feature suggestions are welcome!
+
+📜 License
+
+MIT License © 2025 Yash Puranik
